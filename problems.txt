@@ -1,0 +1,26 @@
+1108F	MST Unification binary search, dsu, graphs, greedy	 Submit	2300	 x632
+1108E2	Array and Segments (Hard version) data structures, implementation	 Submit	2300	 x656
+1108E1	Array and Segments (Easy version) brute force, greedy, implementation	 Submit	1800	 x1756
+1108D	Diverse Garland dp, greedy	 Submit	1400	 x4845
+1108C	Nice Garland brute force, math	 Submit	1300	 x5065
+1108B	Divisors of Two Integers brute force, math, number theory	 Submit	1100	 x7208
+1108A	Two distinct points implementation	 Submit	800	 x8935
+1107G	Vasya and Maximum Profit binary search, data structures, dp, dsu	 Submit	2400	 x189
+1107F	Vasya and Endless Credits dp, graph matchings, sortings	 Submit	2700	 x48
+1107E	Vasya and Binary String dp	 Submit	2400	 x257
+1107D	Compression dp, implementation, math, number theory	 Submit	1800	 x1427
+1107C	Brutality greedy, sortings, two pointers	 Submit	1300	 x3853
+1107B	Digital root math, number theory	 Submit	1100	 x4906
+1107A	Digits Sequence Dividing greedy, strings	 Submit	1000	 x5344
+1105E	Helping Hiasat bitmasks, brute force, meet-in-the-middle	 Submit	2200	 x640
+1105D	Kilani and the Game dfs and similar, graphs, implementation, shortest paths	 Submit	1900	 x1828
+1105C	Ayoub and Lost Array combinatorics, dp, math	 Submit	1500	 x3811
+1105B	Zuhair and Strings brute force, implementation, strings	 Submit	1200	 x5593
+1105A	Salem and Sticks brute force, implementation	 Submit	1100	 x6142
+1104B	Game with string data structures, implementation, math	 Submit	1300	 x5589
+1104A	Splitting into digits constructive algorithms, implementation, math	 Submit	800	 x7540
+1103E	Radix sum fft, math, number theory	 Submit	3300	 x22
+1103D	Professional layer bitmasks, dp	 Submit	3000	 x59
+1103C	Johnny Solving constructive algorithms, dfs and similar, graphs, math	 Submit	2800	 x218
+1103B	Game with modulo binary search	 Submit	2000	 x1491
+1103A	Grid game constructive algorithms, implementation	 Submit	1400	 x4926
