@@ -1,12 +1,7 @@
 #!/usr/bin/env python3
 
-"""
-In this example we are loading only unsolved Div2.C problems
-"""
-
 from collections import defaultdict
 from itertools import groupby
-import os
 import sys
 import time
 
@@ -59,16 +54,23 @@ def filter_week(iterable, contests_ids):
     return filter(lambda problem: problem.contest_id in contests_ids, iterable)
 
 
-def filter_difficult(iterable, diff, max_v):
-    return filter(lambda problem: diff['{}{}'.format(problem.contest_id, problem.index)] < max_v, iterable)
+def filter_difficult(iterable, difficulty, max_d):
+    return filter(lambda problem: difficulty['{}{}'.format(problem.contest_id, problem.index)] <= max_d, iterable)
 
+
+def filter_easy(iterable, difficulty, min_d, id2contest):
+    return filter(lambda problem: (('Div. 3' not in id2contest[problem.contest_id].name) and ('Div. 2' not in id2contest[problem.contest_id].name)) or
+                                  (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
+
+
+div1 = {'legendary grandmaster', 'international grandmaster', 'grandmaster', 'international master', 'master'}
 
 def get_users(api):
     f = open('participants.txt', 'r')
     handles = []
     for line in f:
         handles.append(line)
-    # handles = ['Dos']
+    # handles = ['sava-cska']
 
     users = []
     for handle in handles:
@@ -87,17 +89,23 @@ def get_difficult():
         res[s[0]] = int(s[len(s) - 2])
     return res
 
-
-def print_for_users(api, users, diff):
-    C = 1.2
+def print_for_users(api, users, difficulties):
+    C_HARD = 1.2
+    C_EASY = 0.7
     week_start = datetime.fromisoformat("2019-01-21 00:00:00")
     week_end = datetime.fromisoformat("2019-01-28 00:00:00")
 
     contests = api.contest_list()
-    contests = filter(lambda s: (s.start_time > datetime.timestamp(week_start)) and
+    contests_week = filter(lambda s: (s.start_time > datetime.timestamp(week_start)) and
                                 (s.start_time < datetime.timestamp(week_end)), contests)
 
-    contest_ids = set(contest.id for contest in contests)
+    id2contest = {}
+    for contest in contests_week:
+        id2contest[get_contest_id(contest)] = contest
+
+    contests_week = id2contest.values()
+
+    contest_ids = set(contest.id for contest in contests_week)
 
 
     for user in users:
@@ -109,15 +117,17 @@ def print_for_users(api, users, diff):
         solved = set(run.problem for run in runs)
 
         to_solve = filter(lambda p: p not in solved, problems)
-        to_solve = filter_difficult(to_solve, diff, user.rating * C)
+        to_solve = filter_difficult(to_solve, difficulties, user.rating * C_HARD)
+
+        if user.rank in div1:
+            to_solve = filter_easy(to_solve, difficulties, user.rating * C_EASY, id2contest)
+
 
         for p in to_solve:
             print(make_url(p))
 
 
 def main(argv):
-    # assert len(argv) == 2
-
     api = CodeforcesAPI()
 
     users = get_users(api)
@@ -125,43 +135,6 @@ def main(argv):
 
     print_for_users(api, users, diff)
 
-    #
-    # print('Loading your submissions')
-    # handle = argv[1]
-    # submissions = filter_accepted(api.user_status(handle))
-    # solved_problems = filter_c(submission.problem for submission in submissions)
-    # solved_problems = set(solved_problems)
-    # print('Loaded {} solved C problems'.format(len(solved_problems)))
-    #
-    # print('Loading contests...')
-    # contests = group_by_contest_id(filter_div2(api.contest_list()))
-    #
-    # print('Loaded {} Div.2 contests'.format(len(contests)))
-    #
-    # print('Loading problemset...')
-    # problemset = api.problemset_problems()
-    #
-    # problems = group_by_contest_id(filter_c(problemset['problems']))
-    #
-    # stats = problemset['problemStatistics']
-    # stats = filter_c(stats)
-    # stats = filter(lambda s: s.contest_id in contests, stats)
-    # stats = filter(lambda s: problems[s.contest_id][0] not in solved_problems, stats)
-    # stats = sorted(stats, key=lambda s: s.solved_count, reverse=True)
-    #
-    #
-    # print()
-    # print('{:30}{:15}{}'.format('Name', 'Solved count', 'Url'))
-    #
-    # for stat in stats[:10]:
-    #     problem = problems[stat.contest_id][0]
-    #     print('{:30}{:<15}{}'.format(problem.name, stat.solved_count, make_url(problem)))
-
 
 if __name__ == '__main__':
-    if len(sys.argv) == 1:
-        main(sys.argv)
-    else:
-        print('Invalid number of arguments')
-        print('Usage: python3 {} [user handle]'.format(os.path.basename(sys.argv[0])))
-        sys.exit(1)
+    main(sys.argv)
