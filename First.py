@@ -54,6 +54,17 @@ def filter_week(iterable, contests_ids):
     return filter(lambda problem: problem.contest_id in contests_ids, iterable)
 
 
+def solved_in_div2(problem, solved):
+    for ok in solved:
+        if (abs(int(problem.contest_id) - int(ok.contest_id)) == 1) and (problem.name == ok.name):
+            return True
+    return False
+
+
+def filter_solved_in_div2(iterable, solved):
+    return filter(lambda problem: not solved_in_div2(problem, solved), iterable)
+
+
 def filter_difficult(iterable, difficulty, max_d):
     return filter(lambda problem: difficulty['{}{}'.format(problem.contest_id, problem.index)] <= max_d, iterable)
 
@@ -70,7 +81,7 @@ def get_users(api):
     handles = []
     for line in f:
         handles.append(line)
-    # handles = ['sava-cska']
+    # handles = ['sv_038']
 
     users = []
     for handle in handles:
@@ -117,6 +128,7 @@ def print_for_users(api, users, difficulties):
         solved = set(run.problem for run in runs)
 
         to_solve = filter(lambda p: p not in solved, problems)
+        to_solve = filter_solved_in_div2(to_solve, solved)
         to_solve = filter_difficult(to_solve, difficulties, user.rating * C_HARD)
 
         if user.rank in div1:
