@@ -35,7 +35,8 @@ def group_by_contest_id(iterable):
 
 
 def make_url(problem):
-    return 'http://codeforces.com/contest/{}/problem/{}'.format(problem.contest_id, problem.index)
+    s = 'http://codeforces.com/contest/{}/problem/{}'.format(problem.contest_id, problem.index)
+    return '<a href =\"'+s+'\">'+s+'</a><br>'
 
 
 def filter_div2(iterable):
@@ -108,7 +109,7 @@ def get_difficult():
 def cnt_upsolving(runs, problems, id2contest, difficulty):
     res = 0
     for problem in problems:
-        print(problem, difficulty['{}{}'.format(problem.contest_id, problem.index)])
+        # print(problem, difficulty['{}{}'.format(problem.contest_id, problem.index)])
         solved_in_contest = False
         for run in runs:
             if (run.problem.name == problem.name) and \
@@ -128,9 +129,9 @@ def cnt_upsolving(runs, problems, id2contest, difficulty):
 
 
 def print_for_users(api, users, difficulties):
-    C_HARD = 1.2
-    C_EASY_DIV1 = 0.7
-    C_EASY_DIV2 = 0.5
+    C_HARD = 1.2 #1.3
+    C_EASY_DIV1 = 0.7 #0.8
+    C_EASY_DIV2 = 0.5 #0.8
     week_start = datetime.fromisoformat("2019-01-21 00:00:00")
     week_end = datetime.fromisoformat("2019-01-28 00:00:00")
 
@@ -166,14 +167,15 @@ def print_for_users(api, users, difficulties):
 
         to_solve = filter(lambda p: p not in solved, prob)
         to_solve = filter_solved_in_div2(to_solve, solved)
-        should = set(to_solve)
-
-        print("-----", user.handle, "{}/{}-----".format(ok_ups, ok_ups + len(should)))
+        should = list(to_solve)
+        should = sorted(should, key=lambda problem: '{}{}'.format(problem.contest_id, problem.index))
+        print("-----", user.handle, "{}/{}-----<br>".format(ok_ups, ok_ups + len(should)))
         for p in should:
             print(make_url(p))
 
 
 def main(argv):
+
     api = CodeforcesAPI()
 
     users = get_users(api)
