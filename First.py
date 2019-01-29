@@ -74,6 +74,10 @@ def filter_easy(iterable, difficulty, min_d, id2contest):
                                   (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
 
 
+def filter_easy_div2(iterable, difficulty, min_d):
+    return filter(lambda problem: (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
+
+
 div1 = {'legendary grandmaster', 'international grandmaster', 'grandmaster', 'international master', 'master'}
 
 def get_users(api):
@@ -102,7 +106,8 @@ def get_difficult():
 
 def print_for_users(api, users, difficulties):
     C_HARD = 1.2
-    C_EASY = 0.7
+    C_EASY_DIV1 = 0.7
+    C_EASY_DIV2 = 0.5
     week_start = datetime.fromisoformat("2019-01-21 00:00:00")
     week_end = datetime.fromisoformat("2019-01-28 00:00:00")
 
@@ -132,8 +137,9 @@ def print_for_users(api, users, difficulties):
         to_solve = filter_difficult(to_solve, difficulties, user.rating * C_HARD)
 
         if user.rank in div1:
-            to_solve = filter_easy(to_solve, difficulties, user.rating * C_EASY, id2contest)
-
+            to_solve = filter_easy(to_solve, difficulties, user.rating * C_EASY_DIV1, id2contest)
+        else:
+            to_solve = filter_easy_div2(to_solve, difficulties, user.rating * C_EASY_DIV2)
 
         for p in to_solve:
             print(make_url(p))
