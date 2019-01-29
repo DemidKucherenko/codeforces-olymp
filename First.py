@@ -85,7 +85,7 @@ def get_users(api):
     handles = []
     for line in f:
         handles.append(line)
-    # handles = ['sv_038']
+    # handles = ['mukhametgalin']
 
     users = []
     for handle in handles:
@@ -103,6 +103,29 @@ def get_difficult():
         s = line.split()
         res[s[0]] = int(s[len(s) - 2])
     return res
+
+
+def cnt_upsolving(runs, problems, id2contest, difficulty):
+    res = 0
+    for problem in problems:
+        print(problem, difficulty['{}{}'.format(problem.contest_id, problem.index)])
+        solved_in_contest = False
+        for run in runs:
+            if (run.problem.name == problem.name) and \
+                    (run.creation_time <= id2contest[problem.contest_id].start_time + id2contest[problem.contest_id].duration):
+                solved_in_contest = True
+                break
+
+        if solved_in_contest:
+            continue
+
+        for run in runs:
+            if (run.problem.name == problem.name) and \
+                    (run.creation_time > id2contest[problem.contest_id].start_time + id2contest[problem.contest_id].duration):
+                res += 1
+                break
+    return res
+
 
 def print_for_users(api, users, difficulties):
     C_HARD = 1.2
@@ -125,23 +148,28 @@ def print_for_users(api, users, difficulties):
 
 
     for user in users:
-        print("-----", user.handle, "-----")
         problems = api.problemset_problems()['problems']
         problems = filter_week(problems, contest_ids)
 
         runs = filter_accepted(api.user_status(user.handle))
         solved = set(run.problem for run in runs)
+        ok = set(filter_accepted(api.user_status(user.handle)))
 
-        to_solve = filter(lambda p: p not in solved, problems)
-        to_solve = filter_solved_in_div2(to_solve, solved)
-        to_solve = filter_difficult(to_solve, difficulties, user.rating * C_HARD)
-
+        to_solve = filter_difficult(problems, difficulties, user.rating * C_HARD)
         if user.rank in div1:
             to_solve = filter_easy(to_solve, difficulties, user.rating * C_EASY_DIV1, id2contest)
         else:
             to_solve = filter_easy_div2(to_solve, difficulties, user.rating * C_EASY_DIV2)
 
-        for p in to_solve:
+        prob = set(to_solve)
+        ok_ups = cnt_upsolving(ok, prob, id2contest, difficulties)
+
+        to_solve = filter(lambda p: p not in solved, prob)
+        to_solve = filter_solved_in_div2(to_solve, solved)
+        should = set(to_solve)
+
+        print("-----", user.handle, "{}/{}-----".format(ok_ups, ok_ups + len(should)))
+        for p in should:
             print(make_url(p))
 
 
