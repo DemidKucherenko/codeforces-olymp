@@ -11,6 +11,12 @@ from codeforces import VerdictType
 from codeforces import Problem
 from codeforces import Contest
 
+C_HARD = [1.2, 1.3]
+C_EASY_DIV1 = [0.7, 0.8]
+C_EASY_DIV2 = [0.5, 0.8]
+
+WEEK_S = 7 * 24 * 60 * 60
+
 
 def first_or_default(lst, f):
     return next(filter(f, lst), None)
@@ -128,12 +134,11 @@ def cnt_upsolving(runs, problems, id2contest, difficulty):
     return res
 
 
-def print_for_users(api, users, difficulties):
-    C_HARD = 1.2 #1.3
-    C_EASY_DIV1 = 0.7 #0.8
-    C_EASY_DIV2 = 0.5 #0.8
-    week_start = datetime.fromisoformat("2019-01-21 00:00:00")
-    week_end = datetime.fromisoformat("2019-01-28 00:00:00")
+def print_for_users(api, users, difficulties, week, file):
+    sys.stdout = open(file, 'wt')
+
+    week_start = datetime.fromtimestamp(datetime.timestamp(datetime.fromisoformat("2019-01-21 00:00:00")) + WEEK_S * week)
+    week_end = datetime.fromtimestamp(datetime.timestamp(week_start) + WEEK_S * (week + 1))
 
     contests = api.contest_list()
     contests_week = filter(lambda s: (s.start_time > datetime.timestamp(week_start)) and
@@ -156,11 +161,11 @@ def print_for_users(api, users, difficulties):
         solved = set(run.problem for run in runs)
         ok = set(filter_accepted(api.user_status(user.handle)))
 
-        to_solve = filter_difficult(problems, difficulties, user.rating * C_HARD)
+        to_solve = filter_difficult(problems, difficulties, user.rating * C_HARD[week])
         if user.rank in div1:
-            to_solve = filter_easy(to_solve, difficulties, user.rating * C_EASY_DIV1, id2contest)
+            to_solve = filter_easy(to_solve, difficulties, user.rating * C_EASY_DIV1[week], id2contest)
         else:
-            to_solve = filter_easy_div2(to_solve, difficulties, user.rating * C_EASY_DIV2)
+            to_solve = filter_easy_div2(to_solve, difficulties, user.rating * C_EASY_DIV2[week])
 
         prob = set(to_solve)
         ok_ups = cnt_upsolving(ok, prob, id2contest, difficulties)
@@ -180,8 +185,8 @@ def main(argv):
 
     users = get_users(api)
     diff = get_difficult()
-
-    print_for_users(api, users, diff)
+    for week in range(2):
+        print_for_users(api, users, diff, week, 'tmp.' + str(week + 1) + '.html')
 
 
 if __name__ == '__main__':
