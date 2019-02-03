@@ -134,7 +134,7 @@ def cnt_upsolving(runs, problems, id2contest, difficulty):
     return res
 
 
-def print_for_users(api, users, difficulties, week, file):
+def print_for_users(api, users, difficulties, week, handle2rating, file):
     sys.stdout = open(file, 'wt')
 
     week_start = datetime.fromtimestamp(datetime.timestamp(datetime.fromisoformat("2019-01-21 00:00:00")) + WEEK_S * week)
@@ -152,7 +152,6 @@ def print_for_users(api, users, difficulties, week, file):
 
     contest_ids = set(contest.id for contest in contests_week)
 
-
     for user in users:
         problems = api.problemset_problems()['problems']
         problems = filter_week(problems, contest_ids)
@@ -161,11 +160,11 @@ def print_for_users(api, users, difficulties, week, file):
         solved = set(run.problem for run in runs)
         ok = set(filter_accepted(api.user_status(user.handle)))
 
-        to_solve = filter_difficult(problems, difficulties, user.rating * C_HARD[week])
+        to_solve = filter_difficult(problems, difficulties, handle2rating[user.handle] * C_HARD[week])
         if user.rank in div1:
-            to_solve = filter_easy(to_solve, difficulties, user.rating * C_EASY_DIV1[week], id2contest)
+            to_solve = filter_easy(to_solve, difficulties, handle2rating[user.handle] * C_EASY_DIV1[week], id2contest)
         else:
-            to_solve = filter_easy_div2(to_solve, difficulties, user.rating * C_EASY_DIV2[week])
+            to_solve = filter_easy_div2(to_solve, difficulties, handle2rating[user.handle] * C_EASY_DIV2[week])
 
         prob = set(to_solve)
         ok_ups = cnt_upsolving(ok, prob, id2contest, difficulties)
@@ -179,14 +178,32 @@ def print_for_users(api, users, difficulties, week, file):
             print(make_url(p))
 
 
-def main(argv):
+def save_ratings_to_file(users, file):
+    sys.stdout = open(file, 'wt')
+    for user in users:
+        print(user.handle, user.rating)
 
+
+def load_ratings_from_file(file):
+    f = open(file, 'r')
+    handle2rating = {}
+
+    for line in f:
+        s = line.split()
+        handle2rating[s[0]] = int(s[1])
+    return handle2rating
+
+
+def main(argv):
     api = CodeforcesAPI()
 
     users = get_users(api)
     diff = get_difficult()
     for week in range(2):
-        print_for_users(api, users, diff, week, 'tmp.' + str(week + 1) + '.html')
+        print_for_users(api, users, diff, week, load_ratings_from_file('rating' + str(week + 1) + '.txt'),
+                        'tmp.' + str(week + 1) + '.html')
+
+    # save_ratings_to_file(users, 'rating2.txt')
 
 
 if __name__ == '__main__':
