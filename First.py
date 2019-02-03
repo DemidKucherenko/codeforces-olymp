@@ -2,7 +2,7 @@
 
 from collections import defaultdict
 from itertools import groupby
-import sys
+import sys, traceback
 import time
 
 from datetime import datetime
@@ -207,4 +207,8 @@ def main(argv):
 
 
 if __name__ == '__main__':
-    main(sys.argv)
+	try:
+		main(sys.argv)
+	except:
+		traceback.print_exc()
+		sys.exit(1)	
