@@ -203,7 +203,7 @@ def main(argv):
         print_for_users(api, users, diff, week, load_ratings_from_file('rating' + str(week + 1) + '.txt'),
                         'tmp.' + str(week + 1) + '.html')
 
-    # save_ratings_to_file(users, 'rating2.txt')
+    #save_ratings_to_file(users, 'rating2.txt')
 
 
 if __name__ == '__main__':
