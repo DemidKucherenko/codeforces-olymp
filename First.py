@@ -92,7 +92,7 @@ def get_users(api):
     handles = []
     for line in f:
         handles.append(line)
-    # handles = ['mukhametgalin']
+    # handles = ['sava-cska']
 
     users = []
     for handle in handles:
@@ -138,7 +138,7 @@ def print_for_users(api, users, difficulties, week, handle2rating, file):
     sys.stdout = open(file, 'wt')
 
     week_start = datetime.fromtimestamp(datetime.timestamp(datetime.fromisoformat("2019-01-21 00:00:00")) + WEEK_S * week)
-    week_end = datetime.fromtimestamp(datetime.timestamp(week_start) + WEEK_S * (week + 1))
+    week_end = datetime.fromtimestamp(datetime.timestamp(week_start) + WEEK_S)
 
     contests = api.contest_list()
     contests_week = filter(lambda s: (s.start_time > datetime.timestamp(week_start)) and
@@ -194,7 +194,7 @@ def load_ratings_from_file(file):
     return handle2rating
 
 
-def main(argv):
+def main():
     api = CodeforcesAPI()
 
     users = get_users(api)
@@ -207,8 +207,8 @@ def main(argv):
 
 
 if __name__ == '__main__':
-	try:
-		main(sys.argv)
-	except:
-		traceback.print_exc()
-		sys.exit(1)	
+    try:
+        main()
+    except:
+        traceback.print_exc()
+        sys.exit(1)
