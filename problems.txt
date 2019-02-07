@@ -1,4 +1,17 @@
-1108F	MST Unification binary search, dsu, graphs, greedy	 Submit	2300	 x809
+1111E	Tree data structures, dfs and similar, dp, graphs, trees	 Submit	2800	 x116
+1111D	Destroy the Colony combinatorics, dp, math	 Submit	2500	 x277
+1111C	Creative Snap binary search, brute force, divide and conquer, math	 Submit	1700	 x2615
+1111B	Average Superhero Gang Power brute force, implementation, math	 Submit	1600	 x2716
+1111A	Superhero Transformation implementation, strings	 Submit	1000	 x6888
+1110H	Modest Substrings dp	 Submit  Add to favourites	3500	 x1
+1110G	Tree-Tac-Toe games, trees	 Submit  Add to favourites	3000	 x40
+1110F	Nearest Leaf data structures, trees	 Submit  Add to favourites	2600	 x181
+1110E	Magic Stones constructive algorithms	 Submit  Add to favourites	2200	 x759
+1110D	Jongmah dp	 Submit  Add to favourites	2200	 x671
+1110C	Meaningless Operations math, number theory	 Submit  Add to favourites	1500	 x3321
+1110B	Tape greedy	 Submit  Add to favourites	1400	 x4038
+1110A	Parity math	 Submit  Add to favourites	1000	 x5844
+1108F	MST Unification binary search, dsu, graphs, greedy	 Sub	mit	2300	 x809
 1108E2	Array and Segments (Hard version) data structures, implementation	 Submit	2000	 x810
 1108E1	Array and Segments (Easy version) brute force, greedy, implementation	 Submit	1800	 x1997
 1108D	Diverse Garland dp, greedy	 Submit	1400	 x5359
