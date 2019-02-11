@@ -195,11 +195,9 @@ def main():
 
     users = get_users(api)
     diff = get_difficult()
-    for week in range(2):
+    for week in range(3):
         print_for_users(api, users, diff, week, load_ratings_from_file('rating' + str(week + 1) + '.txt'),
                         'tmp.' + str(week + 1) + '.html')
-
-    #save_ratings_to_file(users, 'rating2.txt')
 
 
 if __name__ == '__main__':
