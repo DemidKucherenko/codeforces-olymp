@@ -2,7 +2,8 @@
 
 from collections import defaultdict
 from itertools import groupby
-import sys, traceback
+import sys
+import traceback
 import time
 
 from datetime import datetime
@@ -86,6 +87,7 @@ def filter_easy_div2(iterable, difficulty, min_d):
 
 
 div1 = {'legendary grandmaster', 'international grandmaster', 'grandmaster', 'international master', 'master'}
+
 
 def get_users(api):
     f = open('participants.txt', 'r')
@@ -176,12 +178,6 @@ def print_for_users(api, users, difficulties, week, handle2rating, file):
         print("-----", user.handle, "{}/{}-----<br>".format(ok_ups, ok_ups + len(should)))
         for p in should:
             print(make_url(p))
-
-
-def save_ratings_to_file(users, file):
-    sys.stdout = open(file, 'wt')
-    for user in users:
-        print(user.handle, user.rating)
 
 
 def load_ratings_from_file(file):
