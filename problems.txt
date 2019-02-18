@@ -1,16 +1,30 @@
-1111E	Tree data structures, dfs and similar, dp, graphs, trees	 Submit	2800	 x116
-1111D	Destroy the Colony combinatorics, dp, math	 Submit	2500	 x277
-1111C	Creative Snap binary search, brute force, divide and conquer, math	 Submit	1700	 x2615
-1111B	Average Superhero Gang Power brute force, implementation, math	 Submit	1600	 x2716
-1111A	Superhero Transformation implementation, strings	 Submit	1000	 x6888
-1110H	Modest Substrings dp	 Submit  Add to favourites	3500	 x1
-1110G	Tree-Tac-Toe games, trees	 Submit  Add to favourites	3000	 x40
-1110F	Nearest Leaf data structures, trees	 Submit  Add to favourites	2600	 x181
-1110E	Magic Stones constructive algorithms	 Submit  Add to favourites	2200	 x759
-1110D	Jongmah dp	 Submit  Add to favourites	2200	 x671
-1110C	Meaningless Operations math, number theory	 Submit  Add to favourites	1500	 x3321
-1110B	Tape greedy	 Submit  Add to favourites	1400	 x4038
-1110A	Parity math	 Submit  Add to favourites	1000	 x5844
+1114F	Please, another Queries on Array? bitmasks, data structures, divide and conquer, math, number theory	 Submit  Add to favourites	2500	 x555
+1114E	Arithmetic Progression binary search, number theory, probabilities	 Submit  Add to favourites	2100	 x1307
+1114D	Flood Fill dp	 Submit  Add to favourites	1900	 x2118
+1114C	Trailing Loves (or L'oeufs?) brute force, implementation, math, number theory	 Submit  Add to favourites	1700	 x3823
+1114B	Yet Another Array Partitioning Task constructive algorithms, greedy, sortings	 Submit  Add to favourites	1500	 x4632
+1114A	Got Any Grapes? brute force, greedy, implementation	 Submit  Add to favourites	800	 x9087
+1113B	Sasha and Magnetic Machines greedy, number theory	 Submit  Add to favourites	1300	 x3410
+1113A	Sasha and His Trip dp, greedy, math	 Submit  Add to favourites	900	 x5175
+1111E	Tree data structures, dfs and similar, dp, graphs, trees	 Submit  Add to favourites	2800	 x183
+1111D	Destroy the Colony combinatorics, dp, math	 Submit  Add to favourites	2500	 x376
+1111C	Creative Snap binary search, brute force, divide and conquer, math	 Submit  Add to favourites	1700	 x3043
+1111B	Average Superhero Gang Power brute force, implementation, math	 Submit  Add to favourites	1600	 x3314
+1111A	Superhero Transformation implementation, strings	 Submit  Add to favourites	1000	 x7938
+1110H	Modest Substrings dp, strings	 Submit  Add to favourites	3500	 x42
+1110G	Tree-Tac-Toe constructive algorithms, games, trees	 Submit  Add to favourites	3000	 x136
+1110F	Nearest Leaf data structures, trees	 Submit  Add to favourites	2600	 x588
+1110E	Magic Stones constructive algorithms, math, sortings	 Submit  Add to favourites	2200	 x1707
+1110D	Jongmah dp	 Submit  Add to favourites	2200	 x1487
+1110C	Meaningless Operations constructive algorithms, math, number theory	 Submit  Add to favourites	1500	 x4469
+1110B	Tape greedy, sortings	 Submit  Add to favourites	1400	 x5498
+1110A	Parity math	 Submit  Add to favourites	1000	 x7688
+1109F	Sasha and Algorithm of Silence's Sounds data structures	 Submit  Add to favourites	3200	 x8
+1109E	Sasha and a Very Easy Test data structures, number theory	 Submit  Add to favourites	2700	 x70
+1109D	Sasha and Interesting Fact from Graph Theory combinatorics, dp, math, trees	 Submit  Add to favourites	2600	 x279
+1109C	Sasha and a Patient Friend data structures, implementation	 Submit  Add to favourites	2800	 x41
+1109B	Sasha and One More Name constructive algorithms, hashing, strings	 Submit  Add to favourites	1800	 x1547
+1109A	Sasha and a Bit of Relax dp, implementation	 Submit  Add to favourites	1600	 x2403
 1108F	MST Unification binary search, dsu, graphs, greedy	 Sub	mit	2300	 x809
 1108E2	Array and Segments (Hard version) data structures, implementation	 Submit	2000	 x810
 1108E1	Array and Segments (Easy version) brute force, greedy, implementation	 Submit	1800	 x1997

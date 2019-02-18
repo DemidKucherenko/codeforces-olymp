@@ -12,9 +12,9 @@ from codeforces import VerdictType
 from codeforces import Problem
 from codeforces import Contest
 
-C_HARD = [1.2, 1.3]
-C_EASY_DIV1 = [0.7, 0.8]
-C_EASY_DIV2 = [0.5, 0.8]
+C_HARD = [1.2, 1.3, 1.3, 1.3]
+C_EASY_DIV1 = [0.7, 0.8, 0.8, 0.8]
+C_EASY_DIV2 = [0.5, 0.8, 0.8, 0.8]
 
 WEEK_S = 7 * 24 * 60 * 60
 
@@ -195,7 +195,7 @@ def main():
 
     users = get_users(api)
     diff = get_difficult()
-    for week in range(3):
+    for week in range(4):
         print_for_users(api, users, diff, week, load_ratings_from_file('rating' + str(week + 1) + '.txt'),
                         'tmp.' + str(week + 1) + '.html')
 
