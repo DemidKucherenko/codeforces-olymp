@@ -97,7 +97,7 @@ def get_users(api):
     for handle in handles:
         for u in api.user_info([handle]):
             users.append(u)
-        time.sleep(0.1)
+        time.sleep(0.2)
 
     return users
 
