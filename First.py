@@ -13,8 +13,8 @@ from codeforces import Problem
 from codeforces import Contest
 
 C_HARD = [1.2, 1.3, 1.3, 1.3]
-C_EASY_DIV1 = [0.7, 0.8, 0.8, 0.8]
-C_EASY_DIV2 = [0.5, 0.8, 0.8, 0.8]
+C_EASY = [0.5, 0.8, 0.8, 0.8]
+C_EASY_DIV1 = 0.7
 
 WEEK_S = 7 * 24 * 60 * 60
 
@@ -77,7 +77,7 @@ def filter_difficult(iterable, difficulty, max_d):
     return filter(lambda problem: difficulty['{}{}'.format(problem.contest_id, problem.index)] <= max_d, iterable)
 
 
-def filter_easy(iterable, difficulty, min_d, id2contest):
+def filter_easy_div1(iterable, difficulty, min_d, id2contest):
     return filter(lambda problem: (('Div. 3' not in id2contest[problem.contest_id].name) and ('Div. 2' not in id2contest[problem.contest_id].name)) or
                                   (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
 
@@ -86,15 +86,12 @@ def filter_easy_div2(iterable, difficulty, min_d):
     return filter(lambda problem: (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
 
 
-div1 = {'legendary grandmaster', 'international grandmaster', 'grandmaster', 'international master', 'master'}
-
-
 def get_users(api):
     f = open('participants.txt', 'r')
     handles = []
     for line in f:
         handles.append(line)
-    # handles = ['sava-cska']
+    # handles = ['Mlxa']
 
     users = []
     for handle in handles:
@@ -163,10 +160,11 @@ def print_for_users(api, users, difficulties, week, handle2rating, file):
         ok = set(filter_accepted(api.user_status(user.handle)))
 
         to_solve = filter_difficult(problems, difficulties, handle2rating[user.handle] * C_HARD[week])
-        if user.rank in div1:
-            to_solve = filter_easy(to_solve, difficulties, handle2rating[user.handle] * C_EASY_DIV1[week], id2contest)
+
+        if week == 0 and handle2rating[user.handle] >= 2100:
+            to_solve = filter_easy_div1(to_solve, difficulties, handle2rating[user.handle] * C_EASY_DIV1, id2contest)
         else:
-            to_solve = filter_easy_div2(to_solve, difficulties, handle2rating[user.handle] * C_EASY_DIV2[week])
+            to_solve = filter_easy_div2(to_solve, difficulties, handle2rating[user.handle] * C_EASY[week])
 
         prob = set(to_solve)
         ok_ups = cnt_upsolving(ok, prob, id2contest, difficulties)
