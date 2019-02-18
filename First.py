@@ -64,7 +64,7 @@ def filter_week(iterable, contests_ids):
 
 def solved_in_div2(problem, solved):
     for ok in solved:
-        if (abs(int(problem.contest_id) - int(ok.contest_id)) == 1) and (problem.name == ok.name):
+        if (abs(int(problem.contest_id) - int(ok.contest_id)) < 10) and (problem.name == ok.name):
             return True
     return False
 
@@ -91,7 +91,7 @@ def get_users(api):
     handles = []
     for line in f:
         handles.append(line)
-    # handles = ['Mlxa']
+    # handles = ['DanShaders']
 
     users = []
     for handle in handles:
