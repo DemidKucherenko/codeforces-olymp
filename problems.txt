@@ -1,11 +1,42 @@
-1114F	Please, another Queries on Array? bitmasks, data structures, divide and conquer, math, number theory	 Submit  Add to favourites	2500	 x555
-1114E	Arithmetic Progression binary search, number theory, probabilities	 Submit  Add to favourites	2100	 x1307
-1114D	Flood Fill dp	 Submit  Add to favourites	1900	 x2118
-1114C	Trailing Loves (or L'oeufs?) brute force, implementation, math, number theory	 Submit  Add to favourites	1700	 x3823
-1114B	Yet Another Array Partitioning Task constructive algorithms, greedy, sortings	 Submit  Add to favourites	1500	 x4632
-1114A	Got Any Grapes? brute force, greedy, implementation	 Submit  Add to favourites	800	 x9087
-1113B	Sasha and Magnetic Machines greedy, number theory	 Submit  Add to favourites	1300	 x3410
-1113A	Sasha and His Trip dp, greedy, math	 Submit  Add to favourites	900	 x5175
+1131G	Most Dangerous Shark data structures, dp, two pointers	 Submit  Add to favourites	2900	 x71
+1131F	Asya And Kittens constructive algorithms, dsu	 Submit  Add to favourites	1700	 x2077
+1131E	String Multiplication dp, greedy, strings	 Submit  Add to favourites	2200	 x409
+1131D	Gourmet choice dfs and similar, dp, dsu, graphs	 Submit  Add to favourites	2000	 x1016
+1131C	Birthday binary search, greedy, sortings	 Submit  Add to favourites	1200	 x4305
+1131B	Draw! greedy, implementation	 Submit  Add to favourites	1300	 x3834
+1131A	Sea Battle math	 Submit  Add to favourites	800	 x5591
+1130C	Connect brute force, dfs and similar	 Submit  Add to favourites	1400	 x2368
+1130B	Two Cakes greedy	 Submit  Add to favourites	1200	 x3196
+1130A	Be Positive implementation	 Submit  Add to favourites	900	 x4273
+1129E	Legendary Tree trees	 Submit  Add to favourites	3000	 x17
+1129D	Isolation data structures, dp	 Submit  Add to favourites	2800	 x51
+1129C	Morse Code dp, sortings, string suffix structures, strings	 Submit  Add to favourites	2300	 x190
+1129B	Wrong Answer constructive algorithms	 Submit  Add to favourites	2200	 x557
+1129A2	Toy Train brute force, greedy	 Submit  Add to favourites	1800	 x1230
+1129A1	Toy Train (Simplified) brute force, greedy	 Submit  Add to favourites	1700	 x1439
+1118F2	Tree Cutting (Hard Version) combinatorics, dfs and similar, dp, trees	 Submit  Add to favourites	2700	 x105
+1118F1	Tree Cutting (Easy Version) dfs and similar, trees	 Submit  Add to favourites	1800	 x1728
+1118E	Yet Another Ball Problem constructive algorithms, implementation	 Submit  Add to favourites	2000	 x1520
+1118D2	Coffee and Coursework (Hard Version) binary search, greedy	 Submit  Add to favourites	1900	 x1983
+1118D1	Coffee and Coursework (Easy version) brute force, greedy	 Submit  Add to favourites	1800	 x2074
+1118C	Palindromic Matrix constructive algorithms, implementation	 Submit  Add to favourites	1700	 x2430
+1118B	Tanya and Candies	 Submit  Add to favourites	1300	 x5155
+1118A	Water Buying math	 Submit  Add to favourites	800	 x7887
+1117G	Recursive Queries data structures	 Submit  Add to favourites	2500	 x127
+1117F	Crisp String bitmasks, dp	 Submit  Add to favourites	2600	 x131
+1117E	Decypher the String bitmasks, chinese remainder theorem, constructive algorithms, math	 Submit  Add to favourites	2200	 x624
+1117D	Magic Gems dp, math, matrices	 Submit  Add to favourites	2000	 x1188
+1117C	Magic Ship binary search	 Submit  Add to favourites	1800	 x1945
+1117B	Emotes greedy, math	 Submit  Add to favourites	1000	 x5804
+1117A	Best Subsegment implementation, math	 Submit  Add to favourites	1100	 x5887
+1114F	Please, another Queries on Array? bitmasks, data structures, divide and conquer, math, number theory	 Submit  Add to favourites	2500	 x621
+1114E	Arithmetic Progression binary search, number theory, probabilities	 Submit  Add to favourites	2100	 x1400
+1114D	Flood Fill dp	 Submit  Add to favourites	1900	 x2323
+1114C	Trailing Loves (or L'oeufs?) brute force, implementation, math, number theory	 Submit  Add to favourites	1700	 x4042
+1114B	Yet Another Array Partitioning Task constructive algorithms, greedy, sortings	 Submit  Add to favourites	1500	 x4891
+1114A	Got Any Grapes? brute force, greedy, implementation	 Submit  Add to favourites	800	 x9666
+1113B	Sasha and Magnetic Machines greedy, number theory	 Submit  Add to favourites	1300	 x4246
+1113A	Sasha and His Trip dp, greedy, math	 Submit  Add to favourites	900	 x6226
 1111E	Tree data structures, dfs and similar, dp, graphs, trees	 Submit  Add to favourites	2800	 x183
 1111D	Destroy the Colony combinatorics, dp, math	 Submit  Add to favourites	2500	 x376
 1111C	Creative Snap binary search, brute force, divide and conquer, math	 Submit  Add to favourites	1700	 x3043
