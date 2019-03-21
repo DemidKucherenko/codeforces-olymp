@@ -12,9 +12,8 @@ from codeforces import VerdictType
 from codeforces import Problem
 from codeforces import Contest
 
-C_HARD = [1.2, 1.3, 1.3, 1.3, 1.3, 1.3, 1.3]
-C_EASY = [0.5, 0.8, 0.8, 0.8, 1, 0.8, 0.8]
-C_EASY_DIV1 = 0.7
+C_HARD = 1.3
+C_EASY = 0.8
 
 WEEK_S = 7 * 24 * 60 * 60
 
@@ -77,12 +76,7 @@ def filter_difficult(iterable, difficulty, max_d):
     return filter(lambda problem: difficulty['{}{}'.format(problem.contest_id, problem.index)] <= max_d, iterable)
 
 
-def filter_easy_div1(iterable, difficulty, min_d, id2contest):
-    return filter(lambda problem: (('Div. 3' not in id2contest[problem.contest_id].name) and ('Div. 2' not in id2contest[problem.contest_id].name)) or
-                                  (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
-
-
-def filter_easy_div2(iterable, difficulty, min_d):
+def filter_easy(iterable, difficulty, min_d):
     return filter(lambda problem: (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
 
 
@@ -91,7 +85,7 @@ def get_users(api):
     handles = []
     for line in f:
         handles.append(line)
-    # handles = ['DanShaders']
+#    handles = ['DanShaders']
 
     users = []
     for handle in handles:
@@ -136,7 +130,7 @@ def cnt_upsolving(runs, problems, id2contest, difficulty):
 def print_for_users(api, users, difficulties, week, handle2rating, file):
     sys.stdout = open(file, 'wt')
 
-    week_start = datetime.fromtimestamp(datetime.timestamp(datetime.fromisoformat("2019-01-21 00:00:00")) + WEEK_S * week)
+    week_start = datetime.fromtimestamp(datetime.timestamp(datetime.fromisoformat("2019-03-11 00:00:00")) + WEEK_S * week)
     week_end = datetime.fromtimestamp(datetime.timestamp(week_start) + WEEK_S)
 
     contests = api.contest_list()
@@ -159,12 +153,8 @@ def print_for_users(api, users, difficulties, week, handle2rating, file):
         solved = set(run.problem for run in runs)
         ok = set(filter_accepted(api.user_status(user.handle)))
 
-        to_solve = filter_difficult(problems, difficulties, handle2rating[user.handle] * C_HARD[week])
-
-        if week == 0 and handle2rating[user.handle] >= 2100:
-            to_solve = filter_easy_div1(to_solve, difficulties, handle2rating[user.handle] * C_EASY_DIV1, id2contest)
-        else:
-            to_solve = filter_easy_div2(to_solve, difficulties, handle2rating[user.handle] * C_EASY[week])
+        to_solve = filter_difficult(problems, difficulties, handle2rating[user.handle] * C_HARD)
+        to_solve = filter_easy(to_solve, difficulties, handle2rating[user.handle] * C_EASY)
 
         prob = set(to_solve)
         ok_ups = cnt_upsolving(ok, prob, id2contest, difficulties)
@@ -193,7 +183,7 @@ def main():
 
     users = get_users(api)
     diff = get_difficult()
-    for week in range(7):
+    for week in range(1):
         print_for_users(api, users, diff, week, load_ratings_from_file('rating' + str(week + 1) + '.txt'),
                         'tmp.' + str(week + 1) + '.html')
 
