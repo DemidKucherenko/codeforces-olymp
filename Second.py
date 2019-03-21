@@ -14,6 +14,7 @@ from codeforces import Contest
 
 C_HARD = 1.3
 C_EASY = 0.8
+MAX_CNT = 5
 
 WEEK_S = 7 * 24 * 60 * 60
 
@@ -45,14 +46,6 @@ def make_url(problem):
     return '<a href =\"'+s+'\">'+s+'</a><br>'
 
 
-def filter_div2(iterable):
-    return filter(lambda contest: 'Div. 2' in contest.name, iterable)
-
-
-def filter_c(iterable):
-    return filter(lambda problem: 'C' in problem.index, iterable)
-
-
 def filter_accepted(iterable):
     return filter(lambda submission: submission.verdict is not None and submission.verdict == VerdictType.ok, iterable)
 
@@ -80,12 +73,21 @@ def filter_easy(iterable, difficulty, min_d):
     return filter(lambda problem: (difficulty['{}{}'.format(problem.contest_id, problem.index)] >= min_d), iterable)
 
 
+def filter_with_max_diff(iterable, difficulty, cnt):
+    problems = list(iterable)
+    if len(problems) <= cnt:
+        return problems
+    sorted_problems = sorted(problems, key=lambda problem: difficulty['{}{}'.format(problem.contest_id, problem.index)],
+                             reverse=True)
+    return sorted_problems[0:cnt]
+
+
 def get_users(api):
     f = open('participants.txt', 'r')
     handles = []
     for line in f:
         handles.append(line)
-#    handles = ['DanShaders']
+    # handles = ['DanShaders']
 
     users = []
     for handle in handles:
@@ -156,7 +158,9 @@ def print_for_users(api, users, difficulties, week, handle2rating, file):
         to_solve = filter_difficult(problems, difficulties, handle2rating[user.handle] * C_HARD)
         to_solve = filter_easy(to_solve, difficulties, handle2rating[user.handle] * C_EASY)
 
+        to_solve = filter_with_max_diff(to_solve, difficulties, MAX_CNT)
         prob = set(to_solve)
+
         ok_ups = cnt_upsolving(ok, prob, id2contest, difficulties)
 
         to_solve = filter(lambda p: p not in solved, prob)
