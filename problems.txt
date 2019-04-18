@@ -1,3 +1,47 @@
+1144G	Two Merged Sequences dp, greedy	 Submit	2600	 x249
+1144F	Graph Without Long Directed Paths dfs and similar, graphs	 Submit	1700	 x1867
+1144E	Median String bitmasks, math, number theory	 Submit	1900	 x1050
+1144D	Equalize Them All constructive algorithms, greedy	 Submit	1400	 x3240
+1144C	Two Shuffled Sequences constructive algorithms, sortings	 Submit	1100	 x5066
+1144B	Parity Alternated Deletions greedy, sortings	 Submit	1000	 x5760
+1144A	Diverse Strings implementation, strings	 Submit	900	 x6417
+1143C	Queen dfs and similar	 Submit	1400	 x2910
+1143B	Nirvana brute force, math, number theory	 Submit	1300	 x3768
+1143A	The Doors implementation	 Submit	700	 x5682
+1142E	Pink Floyd graphs	 Submit	3100	 x26
+1142D	Foreigner dp	 Submit	2700	 x70
+1142C	U2 geometry	 Submit	2800	 x247
+1142B	Lynyrd Skynyrd data structures, dfs and similar, dp, trees	 Submit	2300	 x609
+1142A	The Beatles brute force, math	 Submit	1800	 x1392
+1141G	Privatization of Roads in Treeland binary search, constructive algorithms, dfs and similar, graphs, greedy, trees	 Submit	2500	 x852
+1141F2	Same Sum Blocks (Hard) data structures, greedy	 Submit	2200	 x1639
+1141F1	Same Sum Blocks (Easy) greedy	 Submit	2000	 x1693
+1141E	Superhero Battle math	 Submit	1700	 x3003
+1141D	Colored Boots greedy, implementation	 Submit	1500	 x4081
+1141C	Polycarp Restores Permutation math	 Submit	1400	 x5178
+1141B	Maximal Continuous Rest implementation	 Submit	1000	 x8983
+1141A	Game 23 implementation, math	 Submit	1000	 x9382
+1140G	Double Tree data structures, divide and conquer, shortest paths, trees	 Submit  Add to favourites	2900	 x44
+1140F	Extending Set of Points data structures, divide and conquer, dsu	 Submit  Add to favourites	2700	 x98
+1140E	Palindrome-less Arrays combinatorics, dp	 Submit  Add to favourites	2200	 x589
+1140D	Minimum Triangulation dp, greedy, math	 Submit  Add to favourites	1200	 x4713
+1140C	Playlist brute force, data structures, sortings	 Submit  Add to favourites	1600	 x2935
+1140B	Good String implementation, strings	 Submit  Add to favourites	1200	 x4788
+1140A	Detective Book implementation	 Submit  Add to favourites	1000	 x5967
+1139F	Dish Shopping data structures, divide and conquer	 Submit  Add to favourites	2800	 x75
+1139E	Maximize Mex flows, graph matchings, graphs	 Submit  Add to favourites	2400	 x358
+1139D	Steps to One dp, math, number theory, probabilities	 Submit  Add to favourites	2300	 x438
+1139C	Edgy Trees dfs and similar, dsu, graphs, math, trees	 Submit  Add to favourites	1500	 x3503
+1139B	Chocolates greedy, implementation	 Submit  Add to favourites	1100	 x6055
+1139A	Even Substrings implementation, strings	 Submit  Add to favourites	700	 x7046
+1138B	Circus brute force, greedy, math, strings	 Submit  Add to favourites	1700	 x1778
+1138A	Sushi for Two binary search, greedy, implementation	 Submit  Add to favourites	900	 x5367
+1137F	Matches Are Not a Child's Play data structures, trees	 Submit  Add to favourites	3300	 x70
+1137E	Train Car Selection data structures, greedy	 Submit  Add to favourites	2800	 x160
+1137D	Cooperative Game constructive algorithms, number theory	 Submit  Add to favourites	2500	 x452
+1137C	Museums Tour dp, graphs, implementation	 Submit  Add to favourites	2800	 x416
+1137B	Camp Schedule hashing, strings	 Submit  Add to favourites	1700	 x1992
+1137A	Skyscrapers implementation, sortings	 Submit  Add to favourites	1600	 x2348
 1136E	Nastya Hasn't Written a Legend binary search, data structures	 Submit	2500	 x382
 1136D	Nastya Is Buying Lunch greedy	 Submit	1800	 x1695
 1136C	Nastya Is Transposing Matrices constructive algorithms, sortings	 Submit	1500	 x3796
