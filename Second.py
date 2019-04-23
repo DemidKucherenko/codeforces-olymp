@@ -187,7 +187,9 @@ def main():
 
     users = get_users(api)
     diff = get_difficult()
-    for week in range(4):
+    for week in range(6):
+        if week == 4:
+            continue
         print_for_users(api, users, diff, week, load_ratings_from_file('rating' + str(week + 1) + '.txt'),
                         'tmp.' + str(week + 1) + '.html')
 

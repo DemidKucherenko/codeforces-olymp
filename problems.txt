@@ -5,12 +5,26 @@
 1154C	Gourmet Cat implementation, math	 Submit	1400	 x4115
 1154B	Make Them Equal math	 Submit	1200	 x5981
 1154A	Restoring Three Numbers math	 Submit	600	 x8543
-1153F	Serval and Bonus Problem combinatorics, dp, math, probabilities	 Submit	2800	 x211
-1153E	Serval and Snake binary search, brute force	 Submit	2100	 x760
-1153D	Serval and Rooted Tree binary search, dfs and similar, dp, greedy, trees	 Submit	1800	 x1855
-1153C	Serval and Parenthesis Sequence greedy, strings	 Submit	1600	 x3501
-1153B	Serval and Toy Bricks constructive algorithms, greedy	 Submit	1200	 x5338
-1153A	Serval and Bus brute force, math	 Submit	1100	 x6196
+1153F	Serval and Bonus Problem combinatorics, dp, math, probabilities	 Submit	2800	 x237
+1153E	Serval and Snake binary search, brute force	 Submit	2100	 x825
+1153D	Serval and Rooted Tree binary search, dfs and similar, dp, greedy, trees	 Submit	1800	 x1967
+1153C	Serval and Parenthesis Sequence greedy, strings	 Submit	1600	 x3706
+1153B	Serval and Toy Bricks constructive algorithms, greedy	 Submit	1200	 x5520
+1153A	Serval and Bus brute force, math	 Submit	1100	 x6493
+1151F	Sonya and Informatics combinatorics, dp, matrices, probabilities	 Submit	2500	 x317
+1151E	Number of Components combinatorics, data structures, dp, math	 Submit	2100	 x1022
+1151D	Stas and the Queue at the Buffet greedy, math, sortings	 Submit	1500	 x3559
+1151C	Problem for Nazar constructive algorithms, math	 Submit	1700	 x2302
+1151B	Dima and a Bad XOR bitmasks, brute force, constructive algorithms, dp	 Submit	1600	 x3317
+1151A	Maxim and Biology brute force, strings	 Submit	1000	 x5923
+1146H	Satanic Panic dp, geometry	 Submit	2800	 x80
+1146G	Zoning Restrictions dp, flows, graphs	 Submit	2600	 x150
+1146F	Leaf Partition dp, trees	 Submit	2400	 x235
+1146E	Hot is Cold data structures, divide and conquer	 Submit	2400	 x301
+1146D	Frog Jumping dfs and similar, math, number theory	 Submit	2100	 x540
+1146C	Tree Diameter bitmasks, graphs	 Submit	1700	 x1604
+1146B	Hate "A" implementation, strings	 Submit	1100	 x3118
+1146A	Love "A" implementation, strings	 Submit	600	 x4033
 1144G	Two Merged Sequences dp, greedy	 Submit	2600	 x615
 1144F	Graph Without Long Directed Paths dfs and similar, graphs	 Submit	1700	 x2885
 1144E	Median String bitmasks, math, number theory, strings	 Submit	1900	 x1908
