@@ -14,7 +14,7 @@ def main():
     api = CodeforcesAPI()
 
     users = get_users(api)
-    save_ratings_to_file(users, 'rating6.txt')
+    save_ratings_to_file(users, 'rating8.txt')
 
 
 if __name__ == '__main__':
