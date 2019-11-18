@@ -153,7 +153,7 @@ def get_problems_for_user(api, user, rating, contest_ids, id2contest, difficulti
 def print_list_of_problems_to_files(api, users, difficulties, week, handle2rating, file, cnt):
     sys.stdout = open(file, 'wt')
     ts = datetime.now().timestamp()
-    print("Last time updated: ", datetime.fromtimestamp(ts))
+    print("Last time updated: ", datetime.fromtimestamp(ts), "\n")
 
     week_start = datetime.fromtimestamp(
         datetime.timestamp(datetime.fromisoformat("2019-11-11 00:00:00")) + WEEK_S * week)
