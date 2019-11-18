@@ -1,18 +1,78 @@
-1163F	Indecisive Taxi Fee data structures, graphs, shortest paths	 Submit	2900	 x32
-1163E	Magical Permutation bitmasks, brute force, constructive algorithms, data structures, graphs, math	 Submit	2800	 x152
-1163D	Mysterious Code dp, strings	 Submit	2200	 x459
-1163C2	Power Transmission (Hard Edition) data structures, geometry, implementation, math	 Submit	2000	 x1347
-1163C1	Power Transmission (Easy Edition) brute force, geometry	 Submit	1900	 x1427
-1163B2	Cat Party (Hard Edition) data structures, implementation	 Submit	1700	 x2520
-1163B1	Cat Party (Easy Edition) data structures, implementation	 Submit	1500	 x3022
-1163A	Eating Soup greedy, math	 Submit	1000	 x5550
-1162B	Double Matrix brute force, greedy	 Submit	1400	 x2610
-1162A	Zoning Restrictions Again implementation	 Submit	800	 x3977
-1159B	Expansion coefficient of the array implementation, math	 Submit	1300	 x2862
-1159A	A pile of stones implementation, math	 Submit	800	 x4387
-1158F	Density of subarrays dp, math	 Submit	3400	 x8
-1158E	Strange device math, trees	 Submit	3300	 x5
-1158D	Winding polygonal line constructive algorithms, geometry, greedy, math	 Submit	2800	 x152
-1158C	Permutation recovery constructive algorithms, data structures, dfs and similar, graphs, greedy, math, sortings	 Submit	2300	 x489
-1158B	The minimal unique substring constructive algorithms, math, strings	 Submit	2200	 x665
-1158A	The Party and Sweets binary search, constructive algorithms, greedy, implementation, math, sortings, two pointers	 Submit	1500	 x2342
+1257G	Divisor Setdivide and conquer, fft, math, number theory	Submit Add to favourites	2700	 x160
+1257F	Make Them Similarbitmasks, brute force, hashing, meet-in-the-middle	Submit Add to favourites	2400	 x704
+1257E	The Contestdata structures, dp, greedy	Submit Add to favourites	2000	 x1740
+1257D	Yet Another Monster Killing Problembinary search, data structures, dp, greedy, sortings, two pointers	Submit Add to favourites	1700	 x3152
+1257C	Dominated Subarraygreedy, implementation, sortings, strings, two pointers	Submit Add to favourites	1200	 x6713
+1257B	Magic Stickmath	Submit Add to favourites	1000	 x8183
+1257A	Two Rival Studentsgreedy, math	Submit Add to favourites	700	 x9186
+1256F	Equalizing Two Stringsconstructive algorithms, sortings, strings	Submit Add to favourites	2200	 x1239
+1256E	Yet Another Division Into Teamsdp, greedy, sortings	Submit Add to favourites	2200	 x1561
+1256D	Binary String Minimizinggreedy	Submit Add to favourites	1500	 x4850
+1256C	Platforms Jumpinggreedy	Submit Add to favourites	1700	 x3154
+1256B	Minimize the Permutationgreedy	Submit Add to favourites	1400	 x5890
+1256A	Payment Without Changemath	Submit Add to favourites	1000	 x10537
+1253F	Cheap Robotdsu, graphs, shortest paths, trees	Submit Add to favourites	2600	 x229
+1253E	Antenna Coveragedata structures, dp, greedy, sortings	Submit Add to favourites	2200	 x806
+1253D	Harmonious Graphconstructive algorithms, dfs and similar, dsu, graphs, greedy, sortings	Submit Add to favourites	1700	 x2729
+1253C	Sweets Eatingdp, greedy, math, sortings	Submit Add to favourites	1500	 x3965
+1253B	Silly Mistakegreedy, implementation	Submit Add to favourites	1400	 x4182
+1253A	Single Pushgreedy, implementation	Submit Add to favourites	1000	 x6699
+1252L	Road Constructionflows, graphs	Submit Add to favourites	2600	 x278
+1252K	Addition Robotdata structures, math, matrices	Submit Add to favourites	2200	 x957
+1252J	Tiling Terracebrute force, dp	Submit Add to favourites	2600	 x380
+1252I	Mission Possible	Submit Add to favourites	3200	 x17
+1252H	Twin Buildingsgreedy, implementation	Submit Add to favourites	1900	 x1441
+1252G	Performance Reviewdata structures	Submit Add to favourites	2300	 x745
+1252F	Regular Forestationhashing, trees	Submit Add to favourites	2500	 x417
+1252E	Songwritergreedy, two pointers	Submit Add to favourites	2300	 x622
+1252D	Find String in a Griddata structures, dp, strings, trees	Submit Add to favourites	2900	 x81
+1252C	Even Pathdata structures, implementation	Submit Add to favourites	1600	 x1774
+1252B	Cleaning Robotsdp, trees	Submit Add to favourites	2600	 x267
+1252A	Copying Homework	Submit Add to favourites	1000	 x2874
+1251F	Red-White Fencecombinatorics, fft	Submit Add to favourites	2600	 x205
+1251E2	Voting (Hard Version)binary search, data structures, greedy	Submit Add to favourites	2300	 x957
+1251E1	Voting (Easy Version)data structures, dp, greedy	Submit Add to favourites	2200	 x893
+1251D	Salary Changingbinary search, greedy, sortings	Submit Add to favourites	1800	 x2590
+1251C	Minimize The Integergreedy, two pointers	Submit Add to favourites	1500	 x4909
+1251B	Binary Palindromesgreedy, strings	Submit Add to favourites	1400	 x5537
+1251A	Broken Keyboardbrute force, strings, two pointers	Submit Add to favourites	1000	 x8514
+1250N	Wiresdfs and similar, graphs, greedy	Submit Add to favourites	2200	 x842
+1250M	SmartGardenconstructive algorithms, divide and conquer	Submit Add to favourites	2700	 x206
+1250L	Divide The Studentsbinary search, greedy, math	Submit Add to favourites	1700	 x1578
+1250K	Projectorsflows, graphs	Submit Add to favourites	3200	 x36
+1250J	The Paradebinary search, greedy	Submit Add to favourites	1900	 x1185
+1250I	Show Must Go Onbinary search, brute force, greedy, shortest paths	Submit Add to favourites	3100	 x73
+1250H	Happy Birthdaymath	Submit Add to favourites	1500	 x1768
+1250G	Discarding Gamedp, greedy, two pointers	Submit Add to favourites	2400	 x423
+1250F	Data Centerbrute force, implementation	Submit Add to favourites	1000	 x2467
+1250E	The Coronationgraphs, implementation	Submit Add to favourites	2500	 x428
+1250D	Conference Problemdp	Submit Add to favourites	3100	 x49
+1250C	Trip to Saint Petersburgdata structures	Submit Add to favourites	2300	 x717
+1250B	The Feast and the Busbrute force, constructive algorithms, greedy, math	Submit Add to favourites	1900	 x1252
+1250A	Berstagramimplementation	Submit Add to favourites	1400	 x1853
+1249F	Maximum Weight Subsetdp, trees	Submit Add to favourites	2500	 x737
+1249E	By Elevator or Stairs?dp, shortest paths	Submit Add to favourites	1700	 x3572
+1249D2	Too Many Segments (hard version)data structures, greedy, sortings	Submit Add to favourites	2000	 x2085
+1249D1	Too Many Segments (easy version)greedy	Submit Add to favourites	1900	 x2202
+1249C2	Good Numbers (hard version)binary search, greedy, math, meet-in-the-middle	Submit Add to favourites	1500	 x5353
+1249C1	Good Numbers (easy version)brute force, greedy, implementation	Submit Add to favourites	1300	 x6817
+1249B2	Books Exchange (hard version)dfs and similar, dsu, math	Submit Add to favourites	1300	 x6952
+1249B1	Books Exchange (easy version)dsu, math	Submit Add to favourites	1000	 x9380
+1249A	Yet Another Dividing into Teamsmath	Submit Add to favourites	900	 x11562
+1248D1	The World Is Just a Programming Task (Easy Version)brute force, dp, greedy, implementation	Submit Add to favourites	1900	 x1218
+1248B	Grow The Treegreedy, math, sortings	Submit Add to favourites	900	 x7451
+1248A	Integer Pointsgeometry, math	Submit Add to favourites	900	 x7328
+1246F	Cursor Distance	Submit Add to favourites	3400	 x35
+1245F	Daniel and Spring Cleaningbitmasks, brute force, combinatorics, dp	Submit Add to favourites	2300	 x841
+1245E	Hyakugoku and Laddersdp, probabilities, shortest paths	Submit Add to favourites	2300	 x647
+1245D	Shichikuji and Power Griddsu, graphs, greedy, shortest paths, trees	Submit Add to favourites	1900	 x2692
+1245C	Constanze's Machinedp	Submit Add to favourites	1400	 x5947
+1245B	Restricted RPSconstructive algorithms, dp, greedy	Submit Add to favourites	1200	 x6721
+1245A	Good ol' Numbers Coloringmath, number theory	Submit Add to favourites	1000	 x8205
+1244G	Running in Pairsconstructive algorithms, greedy, math	Submit Add to favourites	2500	 x752
+1244F	Chipsconstructive algorithms, implementation	Submit Add to favourites	2300	 x798
+1244E	Minimizing Differencebinary search, constructive algorithms, greedy, sortings, ternary search, two pointers	Submit Add to favourites	2000	 x2405
+1244D	Paint the Treebrute force, constructive algorithms, dp, graphs, implementation, trees	Submit Add to favourites	1700	 x3603
+1244C	The Football Seasonbrute force, math, number theory	Submit Add to favourites	1900	 x3929
+1244B	Rooms and Staircasesbrute force, implementation	Submit Add to favourites	1000	 x8453
+1244A	Pens and Pencilsmath	Submit Add to favourites	700	 x10602
